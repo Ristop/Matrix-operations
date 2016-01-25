@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="Box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="814.0" stylesheets="@tabs.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <tabs>
+      <Tab onSelectionChanged="#clearOldContent" text="transpose">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="136.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowCountTab1" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <TextField fx:id="columnCountTab1" layoutX="87.0" layoutY="18.0" prefHeight="27.0" prefWidth="40.0" promptText="y" />
+                  <Label layoutX="67.0" layoutY="20.0" prefHeight="27.0" prefWidth="20.0" text="x" />
+                  <Button fx:id="calculateButtonTab1" layoutX="203.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab1" />
+                        <Pane prefWidth="25.0">
+                           <children>
+                              <Label fx:id="transposeSignTab1" layoutX="3.0" text="T" visible="false" />
+                              <Label fx:id="equalsTab1" layoutX="7.0" text="=" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab1" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="inverse">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="70.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowAndColumnCountTab2" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <Button fx:id="calculateButtonTab2" layoutX="143.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab2" />
+                        <Pane prefWidth="25.0">
+                           <children>
+                              <Label fx:id="reverseSignTab2" layoutX="3.0" text="-1" visible="false" />
+                              <Label fx:id="equalsTab2" layoutX="7.0" text="=" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab2" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="minor">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="136.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowCountTab3" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <TextField fx:id="columnCountTab3" layoutX="87.0" layoutY="18.0" prefHeight="27.0" prefWidth="40.0" promptText="y" />
+                  <Label layoutX="67.0" layoutY="20.0" prefHeight="27.0" prefWidth="20.0" text="x" />
+                  <Button fx:id="calculateButtonTab3" layoutX="453.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab3" />
+                        <Pane prefWidth="25.0">
+                           <children>
+                              <Label fx:id="equalsTab3" layoutX="7.0" text="=" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab3" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="minorColumnsTab3" layoutX="368.0" layoutY="19.0" prefHeight="25.0" prefWidth="71.0" visible="false" />
+                  <TextField fx:id="minorRowsTab3" layoutX="232.0" layoutY="19.0" prefHeight="25.0" prefWidth="71.0" visible="false" />
+                  <Label fx:id="minorRowsLabelTab3" layoutX="197.0" layoutY="20.0" prefHeight="27.0" text="rows:" visible="false" />
+                  <Label fx:id="minorColumnsLabelTab3" layoutX="309.0" layoutY="20.0" prefHeight="27.0" text="columns:" visible="false" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="determinant">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="70.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowAndColumnCountTab4" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <Button fx:id="calculateButtonTab4" layoutX="143.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab4" />
+                        <Pane prefWidth="25.0">
+                           <children>
+                              <Label fx:id="equalsTab4" layoutX="7.0" text="=" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab4" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="symmetry">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="70.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowAndColumnCountTab5" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <Button fx:id="calculateButtonTab5" layoutX="143.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab5" />
+                        <Pane prefWidth="25.0">
+                           <children>
+                              <Label fx:id="equalsTab5" layoutX="7.0" text="=" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab5" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="multiply with number">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="136.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowCountTab6" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <TextField fx:id="columnCountTab6" layoutX="87.0" layoutY="18.0" prefHeight="27.0" prefWidth="40.0" promptText="y" />
+                  <Label layoutX="67.0" layoutY="20.0" prefHeight="27.0" prefWidth="20.0" text="x" />
+                  <Button fx:id="calculateButtonTab6" layoutX="203.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab6" />
+                        <Pane layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label fx:id="multiplySignTab6" text="x" visible="false">
+                                 <padding>
+                                    <Insets left="7.0" right="7.0" />
+                                 </padding></Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="entered2PaneTab6" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <TextField fx:id="multiplierTab6" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane>
+                           <children>
+                              <Label fx:id="equalsTab6" text="=" visible="false">
+                                 <padding>
+                                    <Insets left="7.0" right="7.0" />
+                                 </padding></Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab6" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="add/subtract">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="136.0" layoutY="18.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowCountTab7" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <TextField fx:id="columnCountTab7" layoutX="87.0" layoutY="18.0" prefHeight="27.0" prefWidth="40.0" promptText="y" />
+                  <Label layoutX="67.0" layoutY="20.0" prefHeight="27.0" prefWidth="20.0" text="x" />
+                  <Button fx:id="calculateButtonTab7" layoutX="203.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab7" />
+                        <Pane layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <TextField fx:id="operationSighTab7" visible="false" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane fx:id="entered2PaneTab7" layoutX="10.0" layoutY="10.0" />
+                        <Pane>
+                           <children>
+                              <Label fx:id="equalsTab7" text="=" visible="false">
+                                 <padding>
+                                    <Insets left="7.0" right="7.0" />
+                                 </padding></Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab7" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#clearOldContent" text="multiply">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="278.0" layoutY="19.0" mnemonicParsing="false" onAction="#onEnterClick" text="Insert" />
+                  <TextField fx:id="rowCountTab8" layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+                  <TextField fx:id="columnCountTab8" layoutX="87.0" layoutY="18.0" onInputMethodTextChanged="#handleEnterPressed" onKeyPressed="#handleEnterPressed" onKeyReleased="#handleEnterPressed" onKeyTyped="#handleEnterPressed" prefHeight="27.0" prefWidth="40.0" promptText="y" />
+                  <Label layoutX="67.0" layoutY="20.0" prefHeight="27.0" prefWidth="20.0" text="x" />
+                  <Button fx:id="calculateButtonTab8" layoutX="343.0" layoutY="19.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Calculate" visible="false" />
+                  <HBox layoutX="14.0" layoutY="64.0">
+                     <children>
+                        <Pane fx:id="enteredPaneTab8" />
+                        <Pane layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label fx:id="multiplySignTab8" text="x" visible="false">
+                                 <padding>
+                                    <Insets left="7.0" right="7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="7.0" right="7.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane fx:id="entered2PaneTab8" layoutX="10.0" layoutY="10.0" />
+                        <Pane>
+                           <children>
+                              <Label fx:id="equalsTab8" text="=" visible="false">
+                                 <padding>
+                                    <Insets left="7.0" right="7.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="answerPaneTab8" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="207.0" layoutY="21.0" prefHeight="27.0" prefWidth="20.0" text="x" />
+                  <TextField fx:id="columnCount2Tab8" layoutX="227.0" layoutY="19.0" prefHeight="27.0" prefWidth="40.0" promptText="y" />
+                  <TextField fx:id="rowCount2Tab8" layoutX="154.0" layoutY="19.0" onInputMethodTextChanged="#handleEnterPressed2" onKeyPressed="#handleEnterPressed2" onKeyReleased="#handleEnterPressed2" onKeyTyped="#handleEnterPressed2" prefHeight="16.0" prefWidth="40.0" promptText="x" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab onSelectionChanged="#showOriginalImage" text="Image transforming">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="14.0" layoutY="14.0">
+                     <children>
+                        <Pane>
+                           <children>
+                              <TextField fx:id="ImageMatrix1Tab9" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="1" />
+                              <TextField fx:id="ImageMatrix2Tab9" layoutX="55.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="0" />
+                              <TextField fx:id="ImageMatrix3Tab9" layoutY="30.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="0" />
+                              <TextField fx:id="ImageMatrix4Tab9" layoutX="55.0" layoutY="30.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="1" />
+                              <Button layoutY="60.0" maxWidth="105.0" minWidth="105.0" mnemonicParsing="false" onAction="#multiplyImageWithMatrix" prefWidth="105.0" text="multiply" />
+                              <CheckBox fx:id="showAxisCBoxTab9" layoutY="90.0" mnemonicParsing="false" prefWidth="105.0" selected="true" text="Show axis" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="imagePaneTab9" maxHeight="670.0" maxWidth="670.0" minHeight="670.0" minWidth="670.0" prefHeight="670.0" prefWidth="670.0" style="-fx-border-color: black; -fx-border-width: 1;">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
